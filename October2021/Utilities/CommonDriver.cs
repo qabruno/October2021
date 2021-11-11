@@ -21,15 +21,12 @@ namespace October2021.Utilities
             LoginPage loginPageObj = new LoginPage();
             loginPageObj.LoginSteps(driver);
 
-            // Home page object initialization and definition
-            HomePage homePageObj = new HomePage();
-            homePageObj.GoToTMPage(driver);
         }
 
         [OneTimeTearDown]
         public void CloseTestRun()
         {
-            //driver.Quit();
+            driver.Quit();
         }
     }
 }
